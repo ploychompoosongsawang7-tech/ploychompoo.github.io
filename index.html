@@ -3,299 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="เว็บไซต์แสดงผลงานและความสามารถของ Ploychompoo">
+    <meta name="description" content="เว็บไซต์แสดงผลงานและทักษะของ Ploychompoo">
     <title>ความภาคภูมิใจของ PLOYCHOMPOO</title>
-    
-    <!-- นำเข้าฟอนต์ Prompt จาก Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- นำเข้า Font Awesome สำหรับไอคอนแสดงผลงานและความสามารถ -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        /* ==========================================================================
-           1. การตั้งค่าทั่วไป (Global Styles)
-           ========================================================================== */
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Prompt', sans-serif;
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-            background-color: #FFF5F5; /* สีพื้นหลังขาวอมชมพูพาสเทล */
-            color: #4A3E3D; /* สีตัวอักษรน้ำตาลเข้มปนเทา อ่านง่ายและนุ่มนวล */
-        }
-
-        /* ==========================================================================
-           2. ส่วนหัวของเว็บ (Header)
-           ========================================================================== */
-        header {
-            background: linear-gradient(135deg, #FFD1DC, #FFA6B9); /* ไล่เฉดสีชมพูหวานละมุน */
-            color: #5C3D42; 
-            padding: 70px 20px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(255, 166, 185, 0.2);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        header p {
-            margin: 12px 0 0;
-            font-size: 1.2rem;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        /* ==========================================================================
-           3. ส่วนเนื้อหาหลัก (Container & Sections)
-           ========================================================================== */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        section {
-            padding: 35px 40px;
-            margin: 35px 0;
-            background: #FFFFFF; /* กล่องเนื้อหาสีขาวบริสุทธิ์เด่นชัด */
-            border-radius: 18px; /* ขอบโค้งมน */
-            box-shadow: 0 10px 25px rgba(224, 169, 175, 0.15); 
-            transition: all 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(224, 169, 175, 0.25);
-        }
-
-        h2 {
-            color: #DE7A8C; /* สีหัวข้อชมพูเข้ม */
-            font-size: 1.7rem;
-            font-weight: 600;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        p.section-desc {
-            font-size: 1.05rem;
-            color: #5C4D4C;
-            margin: 0;
-        }
-
-        /* ==========================================================================
-           4. การจัดเลย์เอาต์ผลงาน (Projects Grid)
-           ========================================================================== */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .project {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-            background-color: #FFF9FA; /* พื้นหลังกล่องข้างในสีขาวอมชมพูเรื่อๆ */
-            border: 1px solid #FFE4E8;
-            border-radius: 14px;
-            transition: all 0.2s ease;
-        }
-
-        .project:hover {
-            background-color: #FFEBF0;
-            transform: scale(1.02);
-        }
-
-        .project-icon {
-            font-size: 2.5rem;
-            color: #FFA6B9; /* ไอคอนสีชมพู */
-            background: #FFFFFF;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(224, 169, 175, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 75px;
-            height: 75px;
-        }
-
-        .project-info h3 {
-            margin: 0 0 6px;
-            color: #4A3E3D;
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-
-        .project-info p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #7A6867;
-            line-height: 1.5;
-        }
-
-        /* ==========================================================================
-           5. รายการความสามารถพร้อมไอคอน (Skills Grid)
-           ========================================================================== */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 25px;
-            text-align: center;
-            margin-top: 25px;
-        }
-
-        .skill-item {
-            padding: 20px 10px;
-            border-radius: 12px;
-            transition: all 0.2s ease;
-        }
-
-        .skill-item:hover {
-            background-color: #FFF1F3;
-            transform: translateY(-3px);
-        }
-
-        .skill-item i {
-            font-size: 3rem;
-            color: #DE7A8C; /* ไอคอนสีชมพู */
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .skill-item span {
-            font-size: 1rem;
-            font-weight: 500;
-            color: #4A3E3D;
-            display: block;
-        }
-
-        /* ==========================================================================
-           6. ส่วนท้ายเว็บ (Footer)
-           ========================================================================== */
-        footer {
-            text-align: center;
-            padding: 35px 20px;
-            background: #4A3E3D; /* สีน้ำตาลเข้มหรูหรา */
-            color: #FFF5F5;
-            margin-top: 60px;
-            font-size: 0.95rem;
-        }
-
-        footer p {
-            margin: 6px 0;
-        }
-
-        footer a {
-            color: #FFA6B9;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-
-        footer a:hover {
-            color: #FFD1DC;
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <!-- ส่วนหัวของเว็บ (Header) -->
+<body>
+    <!-- ส่วนหัวของเว็บ -->
     <header>
-        <h1>สวัสดี! ฉันคือ PLOYCHOMPOO</h1>
+        <h1>สวัสดีค่ะ! ฉันคือ PLOYCHOMPOO</h1>
         <p>นี่คือผลงานและความภาคภูมิใจของฉัน</p>
     </header>
 
-    <!-- กล่องรวมเนื้อหาหลัก -->
-    <div class="container">
-        
-        <!-- ส่วนเกี่ยวกับตัวเอง -->
-        <section id="about">
-            <h2>เกี่ยวกับฉัน</h2>
-            <p class="section-desc">ฉันเป็นนักเรียนที่มีความหลงใหลในการสร้างสรรค์สิ่งใหม่ ๆ ฉันภูมิใจในผลงานและทักษะความสามารถที่ฉันพัฒนามาอย่างต่อเนื่อง</p>
-        </section>
+    <!-- ส่วนเกี่ยวกับตัวเอง -->
+    <section id="about">
+        <h2>เกี่ยวกับฉัน</h2>
+        <p>ฉันเป็นนักพัฒนาซอฟต์แวร์ที่มีความหลงใหลในการสร้างสรรค์สิ่งใหม่ ๆ ฉันภูมิใจในผลงานและทักษะที่พัฒนามาอย่างต่อเนื่อง</p>
+    </section>
 
-        <!-- ส่วนแสดงผลงาน -->
-        <section id="projects">
-            <h2>ผลงานของฉัน</h2>
-            <div class="project-grid">
-                
-                <div class="project">
-                    <div class="project-icon">
-                        <i class="fa-solid fa-window-restore"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>เว็บไซต์ Portfolio</h3>
-                        <p>เว็บไซต์นี้เป็นหนึ่งในผลงานที่ฉันสร้างขึ้นเพื่อแสดงความสามารถของฉัน</p>
-                    </div>
-                </div>
+    <!-- ส่วนแสดงผลงาน -->
+    <section id="projects">
+        <h2>ผลงานของฉัน</h2>
 
-                <div class="project">
-                    <div class="project-icon">
-                        <i class="fa-solid fa-clipboard-list"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>แอปพลิเคชันจัดการงาน</h3>
-                        <p>แอปพลิเคชันที่ช่วยให้ผู้ใช้งานจัดการงานได้อย่างมีประสิทธิภาพ</p>
-                    </div>
-                </div>
+        <div class="project">
+            <h3>เว็บไซต์ Portfolio</h3>
+            <p>เว็บไซต์นี้เป็นหนึ่งในผลงานที่ฉันสร้างขึ้นเพื่อแสดงความสามารถของฉัน</p>
+        </div>
 
-            </div>
-        </section>
+        <div class="project">
+            <h3>แอปพลิเคชันจัดการงาน</h3>
+            <p>แอปพลิเคชันที่ช่วยให้ผู้ใช้งานจัดการงานได้อย่างมีประสิทธิภาพ</p>
+        </div>
+    </section>
 
-        <!-- ส่วนแสดงความสามารถ (สามารถแก้ไขข้อความในแท็ก <span> เป็นความสามารถของคุณได้เลยค่ะ) -->
-        <section id="skills">
-            <h2>ความสามารถของฉัน</h2>
-            <div class="skills-grid">
-                
-                <div class="skill-item">
-                    <i class="fa-solid fa-code"></i>
-                    <span>HTML, CSS, JavaScript</span>
-                </div>
+    <!-- ส่วนแสดงทักษะ -->
+    <section id="skills">
+        <h2>ทักษะของฉัน</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Python, Django</li>
+            <li>Git และ GitHub</li>
+            <li>การออกแบบ UI/UX</li>
+        </ul>
+    </section>
 
-                <div class="skill-item">
-                    <i class="fa-solid fa-cubes"></i>
-                    <span>Python, Django</span>
-                </div>
-
-                <div class="skill-item">
-                    <i class="fa-solid fa-code-branch"></i>
-                    <span>Git & GitHub</span>
-                </div>
-
-                <div class="skill-item">
-                    <i class="fa-solid fa-compass-drafting"></i>
-                    <span>การออกแบบ UI/UX</span>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-    <!-- ส่วนติดต่อและลิขสิทธิ์ (Footer) -->
+    <!-- ส่วนติดต่อและลิขสิทธิ์ -->
     <footer>
-        <p>ติดต่อฉันได้ที่: <a href="mailto:ploychompoo@gmail.com">ploychompoo@gmail.com</a></p>
+        <p>ติดต่อฉันได้ที่:
+            <a href="mailto:ploychompoo@example.com">ploychompoo@example.com</a>
+        </p>
         <p>&copy; <span id="year"></span> PLOYCHOMPOO. All rights reserved.</p>
     </footer>
 
-    <!-- ส่วน JavaScript อัปเดตปีปัจจุบัน -->
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-
+    <!-- เรียกใช้ JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
