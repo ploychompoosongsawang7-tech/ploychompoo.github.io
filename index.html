@@ -1,57 +1,68 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="เว็บไซต์แสดงผลงานและทักษะของ Ploychompoo">
-    <title>ความภาคภูมิใจของ PLOYCHOMPOO</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- ส่วนหัวของเว็บ -->
-  <header>
-        <h1>สวัสดี! ผมคือ PLOYCHOMPOO</h1>
-        <p>นี่คือผลงานและความภาคภูมิใจของผม</p>
-    </header>
+body {
+    font-family: Arial, sans-serif; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE5EC; /* สีพื้นหลังเว็บ: สีชมพูพาสเทลอ่อน */
+    color: #000000;            /* สีตัวอักษรทั่วไป: สีดำสนิทตามที่ต้องการ */
+}
 
-    <!-- ส่วนเกี่ยวกับตัวเอง -->
-    <section id="about">
-        <h2>เกี่ยวกับผม</h2>
-        <p>ผมเป็นนักพัฒนาซอฟต์แวร์ที่มีความหลงใหลในการสร้างสรรค์สิ่งใหม่ ๆ ผมภูมิใจในผลงานและทักษะที่ผมพัฒนามาอย่างต่อเนื่อง</p>
-    </section>
+header {
+    background: #FFC2D1;       /* สีแถบหัวเว็บ: สีชมพูซากุระ */
+    color: #000000;            /* สีตัวอักษรในแถบหัวเว็บ: สีดำ */
+    padding: 20px 0;
+    text-align: center;
+}
 
-    <!-- ส่วนแสดงผลงาน -->
-    <section id="projects">
-        <h2>ผลงานของผม</h2>
- <div class="project">
-            <h3>เว็บไซต์ Portfolio</h3>
-            <p>เว็บไซต์นี้เป็นหนึ่งในผลงานที่ผมสร้างขึ้นเพื่อแสดงความสามารถของผม</p>
-        </div>
- <div class="project">
-            <h3>แอปพลิเคชันจัดการงาน</h3>
-            <p>แอปพลิเคชันที่ช่วยให้ผู้ใช้งานจัดการงานได้อย่างมีประสิทธิภาพ</p>
-        </div>
-    </section>
-<!-- ส่วนแสดงทักษะ -->
-    <section id="skills">
-        <h2>ทักษะของผม</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Python, Django</li>
-            <li>Git และ GitHub</li>
-            <li>การออกแบบ UI/UX</li>
-        </ul>
-    </section>
+header h1 {
+    margin: 0;
+}
 
-    <!-- ส่วนติดต่อและลิขสิทธิ์ -->
-    <footer>
-        <p>ติดต่อผมได้ที่:
-            <a href="mailto:ploychompoo@gmail.com">ploychompoo@gmail.com</a>
-        </p>
-        <p>&copy; <span id="year"></span> PLOYCHOMPOO. All rights reserved.</p>
-    </footer>
+header p {
+    margin: 5px 0 0;
+}
 
-    <!-- ลิงก์ไปยัง JavaScript -->
-    <script src="script.js"></script>
-</body>
-</html>
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #ffffff;       /* กล่องเนื้อหา: สีขาวเพื่อให้ข้อความอ่านง่ายเด่นขึ้นมา */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #FF477E;            /* สีหัวข้อใหญ่ (เกี่ยวกับผม/ผลงาน): สีชมพูเข้มเข้มเพื่อให้ดูเด่น */
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin: 0 0 10px;
+    color: #000000;            /* สีชื่อโปรเจกต์: สีดำ */
+}
+
+p {
+    color: #000000;            /* ตัวหนังสือในย่อหน้าทั้งหมด: สีดำ */
+}
+
+ul {
+    list-style-type: square;
+    color: #000000;            /* ตัวหนังสือในรายการทักษะ: สีดำ */
+}
+
+/* ตั้งค่าสีลิงก์อีเมลใน footer ให้ชัดเจน */
+footer a {
+    color: #E0115F;            /* สีลิงก์อีเมล: สีชมพูเข้ม */
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #FBB1BD;       /* สีแถบด้านล่างสุด (Footer): สีชมพูนม */
+    color: #000000;            /* สีตัวอักษรใน Footer: สีดำ */
+    margin-top: 20px;
+}
