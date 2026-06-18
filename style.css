@@ -1,58 +1,55 @@
 body {
-    font-family: Arial, sans-serif; 
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #FFE5EC; /* สีพื้นหลังเว็บ: ชมพูพาสเทลอ่อนหวานๆ */
-    color: #333333;            /* สีตัวอักษรทั่วไป: สีเทาเข้มเพื่อให้温馨และอ่านง่าย */
+    font-family: Arial, sans-serif; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #FFE5EC; 
 }
 
 header {
-    background: #FF477E;       /* สีแถบหัวเว็บ: ชมพูบาร์บี้โดดเด่น */
-    color: white;              /* สีตัวอักษรในแถบหัวเว็บ: สีขาวตัดกันชัดเจน */
-    padding: 20px 0;
-    text-align: center;
+    background: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
 
 header h1 {
-    margin: 0;
+    margin: 0;
 }
 
 header p {
-    margin: 5px 0 0;
+    margin: 5px 0 0;
 }
-
 section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background: white;         /* สีพื้นหลังกล่องเนื้อหา: สีขาวเพื่อให้แยกจากพื้นหลังเว็บชัดเจน */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-} /* แก้ไข: ใส่ปีกกาปิดที่เคยหายไปให้เรียบร้อยแล้ว */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 h2 {
-    color: #FF477E;            /* สีหัวข้อใหญ่: ชมพูบาร์บี้ เข้าคู่กับ Header */
+    color: #4CAF50;
 }
 
 .project {
-    margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .project h3 {
-    margin: 0 0 10px;
-    color: #FF007F;            /* สีชื่อโปรเจกต์: ชมพูสด Hot Pink ให้ดูน่าสนใจ */
+    margin: 0 0 10px;
+    color: #333;
 }
 
 ul {
-    list-style-type: square;
-    color: #666666;            /* สีของรายการ List: เทากลางๆ */
+    list-style-type: square;
 }
 
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #FFC2D1;       /* สีแถบด้านล่างสุด: ชมพูซากุระละมุนๆ */
-    color: #4a4a4a;            /* สีตัวอักษรใน Footer */
-    margin-top: 20px;
+    text-align: center;
+    padding: 10px 0;
+    background: #333; 
+    color: white;
+    margin-top: 20px;
 }
